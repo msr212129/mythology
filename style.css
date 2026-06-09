@@ -1,0 +1,432 @@
+/* Базовые настройки */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-card: #161616;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent-gold: #d4af37;
+    --accent-gold-hover: #f1c40f;
+    --font-heading: 'Cinzel', serif;
+    --font-text: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Главный экран (Hero) */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Темный градиент вместо картинки для надежности, но можно заменить на URL */
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--bg-dark);
+    background-color: var(--accent-gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-gold-hover);
+    box-shadow: 0 0 15px var(--accent-gold);
+}
+
+/* О проекте */
+.about {
+    background-color: #111;
+    text-align: center;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+
+/* Граф */
+.graph-section {
+    background-color: var(--bg-dark);
+    text-align: center;
+}
+
+.graph-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: inline-block;
+    max-width: 100%;
+}
+
+.graph-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Карточки архетипов */
+.archetypes {
+    background-color: #111;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent-gold);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.match {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.gods {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Карусели (Общие стили) */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 10px;
+    width: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 10;
+    background: var(--bg-dark);
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.carousel-btn:hover {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--accent-gold);
+}
+
+.carousel-prev { left: -25px; }
+.carousel-next { right: -25px; }
+
+/* Галерея Артефактов */
+.artifact-card {
+    flex: 0 0 300px;
+    background-color: var(--bg-card);
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #333;
+}
+
+.artifact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    border-color: var(--accent-gold);
+}
+
+.artifact-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.artifact-card:hover .artifact-icon {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px var(--accent-gold);
+}
+
+/* Тайны мифологии (Карточки) */
+.secrets {
+    background-color: #111;
+}
+
+.secret-card {
+    flex: 0 0 350px;
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent-gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.secret-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.secret-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Мини-игра */
+.game-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-magic {
+    font-size: 1.3rem;
+    padding: 20px 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #d4af37, #f1c40f);
+    color: #000;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-magic:hover {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+    transform: scale(1.05);
+}
+
+.rune-result {
+    margin-top: 40px;
+    padding: 40px 30px;
+    background-color: var(--bg-card);
+    border: 2px dashed var(--accent-gold);
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease;
+}
+
+.rune-result.hidden {
+    display: none;
+}
+
+.result-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); text-shadow: 0 0 20px var(--accent-gold); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .carousel-btn { display: none; } /* На мобильных просто свайпаем */
+}
+
+/* Вывод */
+.conclusion {
+    background-color: var(--bg-dark);
+}
+
+.conclusion-box {
+    background-color: var(--bg-card);
+    padding: 50px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-gold);
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.conclusion-box strong {
+    color: var(--accent-gold);
+}
+
+/* Подвал */
+footer {
+    background-color: #050505;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Анимации JS */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+    .conclusion-box {
+        padding: 30px;
+        font-size: 1.1rem;
+    }
+}

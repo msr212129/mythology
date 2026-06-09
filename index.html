@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнительная мифология: древо1 богов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Блок 1: Главный экран -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Сравнительная мифология:<br>древо богов</h1>
+            <p>Что общего у культур, которые никогда не встречались?<br>Анализ славянского, скандинавского и греческого
+                пантеонов.</p>
+            <a href="#about" class="btn">Узнать больше</a>
+        </div>
+    </header>
+
+    <!-- Блок 2: О проекте -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>О проекте</h2>
+            <p class="lead-text">
+                Мы проанализировали мифологии трех великих культур, чтобы найти общие архетипы.
+                С помощью Python мы обработали данные об атрибутах и функциях богов,
+                рассчитали "коэффициент совпадения" и построили интерактивное древо соответствий.
+            </p>
+        </div>
+    </section>
+
+    <!-- Блок 3: Интерактивное древо богов (Граф) -->
+    <section class="section graph-section">
+        <div class="container">
+            <h2>Интерактивное древо богов</h2>
+            <div class="graph-container">
+                <img src="mythology_graph.png" alt="Сетевой граф мифологии" class="graph-image">
+            </div>
+            <p class="caption">
+                Сетевой граф, построенный с использованием библиотеки NetworkX.
+                Узлы показывают связи между культурами, богами и их ключевыми функциями.
+            </p>
+        </div>
+    </section>
+
+    <!-- Блок 4: Топ-5 общечеловеческих архетипов (Карточки) -->
+    <section class="section archetypes">
+        <div class="container">
+            <h2>Топ-5 общечеловеческих архетипов</h2>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Громовержец</h3>
+                    <div class="match">100% совпадение</div>
+                    <p class="gods"><strong>Боги:</strong> Зевс (Греция), Тор (Скандинавия), Перун (Славяне)</p>
+                    <p>Громовержец есть у всех. Это верховная сила, защитник людей, управляющий стихией молнии. Оружие
+                        всегда мощное: молот, секира или сами молнии.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌸</div>
+                    <h3>Богиня любви</h3>
+                    <div class="match">100% совпадение</div>
+                    <p class="gods"><strong>Боги:</strong> Афродита, Фрейя, Лада</p>
+                    <p>Воплощение красоты, плодородия и страсти. Всегда связана с птицами (голуби, соколы, лебеди) и
+                        украшениями.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💀</div>
+                    <h3>Покровитель мёртвых</h3>
+                    <div class="match">100% совпадение</div>
+                    <p class="gods"><strong>Боги:</strong> Аид, Хель, Марена</p>
+                    <p>Хозяева подземного мира. Образ часто связан с холодом, тьмой и животными-стражами.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Бог мудрости и магии</h3>
+                    <div class="match">100% совпадение</div>
+                    <p class="gods"><strong>Боги:</strong> Гермес, Один, Велес</p>
+                    <p>Трикстеры, проводники между мирами, обладатели тайных знаний и покровители путников.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🧵</div>
+                    <h3>Божество судьбы</h3>
+                    <div class="match">66% совпадение</div>
+                    <p class="gods"><strong>Боги:</strong> Норны, Макошь</p>
+                    <p>Пряхи, плетущие нить человеческой жизни. Интересно, что этот образ особенно ярко выражен именно в
+                        северных и восточных традициях.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: Артефакты и Символы (Галерея-карусель) -->
+    <section class="section artifacts">
+        <div class="container">
+            <h2>Артефакты и Символы</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-prev">◀</button>
+                <div class="carousel-track">
+                    <div class="artifact-card">
+                        <div class="artifact-icon">⚡</div>
+                        <h3>Молния Зевса</h3>
+                        <p>Символ абсолютной власти и небесного огня, выкованный циклопами.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🔨</div>
+                        <h3>Мьёльнир</h3>
+                        <p>Молот Тора, всегда возвращающийся к владельцу. Символ созидания и разрушения.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🧶</div>
+                        <h3>Веретено Макоши</h3>
+                        <p>Символ непрерывности жизни. Нить, которую прядет богиня, определяет судьбу человека.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🔱</div>
+                        <h3>Трезубец Посейдона</h3>
+                        <p>Оружие владыки морей, способное вызывать штормы и землетрясения.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">👁️</div>
+                        <h3>Копьё Гунгнир</h3>
+                        <p>Копьё Одина, которое никогда не промахивается мимо цели и пробивает любую броню.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🦅</div>
+                        <h3>Шлем Аида</h3>
+                        <p>Магический шлем, делающий своего владельца невидимым даже для богов.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🍎</div>
+                        <h3>Яблоко раздора</h3>
+                        <p>Золотое яблоко с надписью «Прекраснейшей», ставшее причиной Троянской войны.</p>
+                    </div>
+                    <div class="artifact-card">
+                        <div class="artifact-icon">🎵</div>
+                        <h3>Гусли Велеса</h3>
+                        <p>Магический инструмент славянского бога, звуки которого завораживают природу.</p>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: Тайны мифологии (Карусель карточек) -->
+    <section class="section secrets">
+        <div class="container">
+            <h2>Тайны мифологии</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-prev">◀</button>
+                <div class="carousel-track">
+                    <div class="secret-card">
+                        <h3>Почему у всех есть бог грома?</h3>
+                        <p>Гроза была самым пугающим и неконтролируемым природным явлением. Звук грома ассоциировался с
+                            гневом небес, а молния — с божественным оружием. Поэтому громовержец часто занимает место
+                            верховного божества.</p>
+                    </div>
+                    <div class="secret-card">
+                        <h3>Как связаны нитки и жизнь?</h3>
+                        <p>Процесс прядения в древности считался сакральным. Нить рождается из кудели (рождение),
+                            тянется (жизнь) и обрывается (смерть). Норны, Мойры и Макошь управляют судьбами именно с
+                            помощью веретена.</p>
+                    </div>
+                    <div class="secret-card">
+                        <h3>Почему подземный мир холодный?</h3>
+                        <p>Смерть ассоциировалась с отсутствием солнца и тепла. Погребение в землю сформировало образ
+                            царства Аида, Хельхейма или царства Марены как мест, лишенных света и радости жизни.</p>
+                    </div>
+                    <div class="secret-card">
+                        <h3>Зачем богам животные-спутники?</h3>
+                        <p>Животные олицетворяли силы природы. Вороны Одина — мудрость, орел Зевса — власть небес,
+                            медведь Велеса — силу леса. Боги заимствовали черты тотемных животных древних племен.</p>
+                    </div>
+                    <div class="secret-card">
+                        <h3>Почему боги-трикстеры так популярны?</h3>
+                        <p>Локи, Гермес, Велес — они нарушают правила. Людям были нужны боги, которые объясняли бы
+                            случайности, хитрость и непредсказуемость жизни, а не только строгий порядок.</p>
+                    </div>
+                    <div class="secret-card">
+                        <h3>Связь солнца и колесницы</h3>
+                        <p>Древние люди видели, как солнце "движется" по небу. Изобретение колеса и колесницы стало
+                            технологическим чудом, поэтому Аполлон, Даждьбог и Соль передвигаются именно на небесных
+                            колесницах.</p>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: Мини-игра (Генератор архетипа) -->
+    <section class="section minigame">
+        <div class="container">
+            <h2>Узнай свой мифологический архетип</h2>
+            <p class="lead-text">Бросьте виртуальные руны, чтобы узнать, какая божественная функция скрыта в вашем
+                характере.</p>
+            <div class="game-container">
+                <button id="draw-runes" class="btn btn-magic">Бросить руны 🎲</button>
+                <div id="rune-result" class="rune-result hidden">
+                    <div class="result-icon" id="result-icon">✨</div>
+                    <h3 id="result-title">Судьба решает...</h3>
+                    <p id="result-desc">Подождите, читаем нити судьбы...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 5: Главный вывод -->
+    <section class="section conclusion">
+        <div class="container">
+            <h2>Главный вывод</h2>
+            <div class="conclusion-box">
+                <p>
+                    Наш анализ данных доказывает: несмотря на географическую изоляцию и различия в климате, древние люди
+                    мыслили схожими архетипами. Потребность в объяснении природных явлений (гром, солнце, смерть)
+                    породила универсальные "функции", которые каждая культура одела в свои уникальные имена и атрибуты.
+                    <strong>Человеческая психология универсальна.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Проект выполнен в рамках практики по программе «Основы программирования на языке Python для лингвистов».
+            </p>
+            <p>&copy; 2026 Команда проекта</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
