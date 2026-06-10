@@ -120,6 +120,74 @@ h1, h2, h3 {
     color: var(--text-muted);
 }
 
+.lead-text code,
+.caption code {
+    color: var(--accent-gold);
+    font-size: 0.95em;
+}
+
+.data-stats {
+    margin-top: 20px;
+    color: var(--accent-gold);
+}
+
+.culture-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid var(--accent-gold);
+    background: transparent;
+    color: var(--accent-gold);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+}
+
+.culture-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent-gold);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.god-card h3 {
+    margin-bottom: 15px;
+}
+
+.artifact-culture {
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.data-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px;
+}
+
 /* Граф */
 .graph-section {
     background-color: var(--bg-dark);
